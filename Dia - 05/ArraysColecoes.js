@@ -7,7 +7,7 @@ let adicionar = prompt("Você deseja adicionar uma comida na sua lista de compra
 if(adicionar == 'sim') {
     while(adicionar == 'sim') {
         let comida = prompt('Qual comida você deseja inserir?');
-        let categoria = prompt('Qual categoria essa comida se encaixa?')
+        let categoria = prompt("Em qual dessas categorias essa comida se encaixa: 'Frutas', 'Laticínios', 'Congelados' ou 'Doces'?")
         if(categoria == 'Frutas') {
             Frutas.push(comida)
         } else if(categoria == 'Laticínios') {
@@ -20,6 +20,7 @@ if(adicionar == 'sim') {
         adicionar = prompt('Deseja adicionar mais alguma comida?')
         if(adicionar == 'não') {
             alert('Tudo bem então...A sua lista de compras ficou assim:')
+            console.log('Lista de Compras:')
             console.log(`Frutas: ${Frutas}`)
             console.log(`Laticínios: ${Laticínios}`)
             console.log(`Congelados: ${Congelados}`)
@@ -28,5 +29,5 @@ if(adicionar == 'sim') {
         }
     }
 } else if(adicionar == 'não') {
-    console.log('Tudo bem então... Volte outra hora!')
+    alert('Tudo bem então... Volte outra hora!')
 }
